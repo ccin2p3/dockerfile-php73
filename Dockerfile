@@ -1,7 +1,7 @@
 FROM php:7.3.4-fpm
 
 RUN apt-get update -yqq \
-    && apt-get install git wget unzip zlibc zlib1g zlib1g-dev libxml2-dev libssl-dev libicu-dev g++ apt-transport-https sudo gnupg gnupg1 gnupg2 tar libpng-dev -yqq
+    && apt-get install git wget unzip zlibc zlib1g libzip zlib1g-dev libxml2-dev libssl-dev libicu-dev g++ apt-transport-https sudo gnupg gnupg1 gnupg2 tar libpng-dev -yqq
 
 # install general php extensions
 RUN docker-php-ext-install pdo_mysql \
